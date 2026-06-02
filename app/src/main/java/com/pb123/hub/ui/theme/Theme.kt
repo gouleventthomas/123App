@@ -13,33 +13,35 @@ import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
 
 private val LightColors = lightColorScheme(
-    primary = PBBlue,
+    primary = BrandTealDeep,
     onPrimary = Color.White,
-    primaryContainer = PBBlueLight,
+    primaryContainer = BrandTeal,
     onPrimaryContainer = Color.White,
-    secondary = PBRed,
+    secondary = BrandCyan,
     onSecondary = Color.White,
+    secondaryContainer = BrandCyan,
+    onSecondaryContainer = Color(0xFF06363F),
     background = SurfaceLight,
-    onBackground = Color(0xFF1A1C1E),
+    onBackground = Color(0xFF18201F),
     surface = Color.White,
-    onSurface = Color(0xFF1A1C1E),
-    surfaceVariant = Color(0xFFE3E8EF),
-    onSurfaceVariant = Color(0xFF42474E),
+    onSurface = Color(0xFF18201F),
+    surfaceVariant = Color(0xFFDCEEF0),
+    onSurfaceVariant = Color(0xFF3F484A),
 )
 
 private val DarkColors = darkColorScheme(
-    primary = PBBlueLight,
-    onPrimary = Color.White,
-    primaryContainer = PBBlueDark,
+    primary = BrandTeal,
+    onPrimary = Color(0xFF06302D),
+    primaryContainer = BrandTealDeep,
     onPrimaryContainer = Color.White,
-    secondary = PBRed,
-    onSecondary = Color.White,
+    secondary = BrandCyan,
+    onSecondary = Color(0xFF06363F),
     background = SurfaceDark,
-    onBackground = Color(0xFFE2E2E6),
-    surface = Color(0xFF1A1F24),
-    onSurface = Color(0xFFE2E2E6),
-    surfaceVariant = Color(0xFF2A3038),
-    onSurfaceVariant = Color(0xFFC2C7CF),
+    onBackground = Color(0xFFDFE3E3),
+    surface = Color(0xFF161E20),
+    onSurface = Color(0xFFDFE3E3),
+    surfaceVariant = Color(0xFF2A3537),
+    onSurfaceVariant = Color(0xFFBFC8C9),
 )
 
 @Composable
@@ -53,8 +55,9 @@ fun PB123HubTheme(
     if (!view.isInEditMode) {
         SideEffect {
             val window = (view.context as Activity).window
-            window.statusBarColor = PBBlue.toArgb()
-            WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = false
+            window.statusBarColor = BrandCyan.toArgb()
+            // Cyan clair => icônes système sombres pour rester lisibles.
+            WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = !darkTheme
         }
     }
 

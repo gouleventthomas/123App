@@ -3,7 +3,7 @@
     <!-- Base theme: Compose draws the real Material 3 UI, so we only need a
          no-action-bar host theme with the brand splash background color. -->
     <style name="Theme.PB123Hub" parent="android:Theme.Material.Light.NoActionBar">
-        <item name="android:windowBackground">@color/pb_blue</item>
-        <item name="android:statusBarColor">@color/pb_blue</item>
+        <item name="android:windowBackground">@color/brand_cyan</item>
+        <item name="android:statusBarColor">@color/brand_cyan</item>
     </style>
 </resources>

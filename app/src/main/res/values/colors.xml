@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="pb_blue">#FF003D7A</color>
+    <color name="brand_cyan">#FF12C9F0</color>
+    <color name="brand_teal">#FF36B2AA</color>
     <color name="white">#FFFFFFFF</color>
     <color name="black">#FF000000</color>
 </resources>

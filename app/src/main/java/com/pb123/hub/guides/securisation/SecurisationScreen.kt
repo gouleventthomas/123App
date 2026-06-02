@@ -50,8 +50,8 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.pb123.hub.ui.theme.DangerRed
 import com.pb123.hub.ui.theme.OkGreen
-import com.pb123.hub.ui.theme.PBRed
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -255,7 +255,7 @@ fun SecurisationScreen(
                 TextButton(onClick = {
                     viewModel.reset()
                     showResetDialog = false
-                }) { Text("Effacer", color = PBRed) }
+                }) { Text("Effacer", color = DangerRed) }
             },
             dismissButton = {
                 TextButton(onClick = { showResetDialog = false }) { Text("Annuler") }
@@ -397,7 +397,7 @@ private fun ProgressBottomBar(state: SecurisationState) {
 private fun assuranceColor(type: AssuranceType): Color = when (type) {
     AssuranceType.VERTE -> OkGreen
     AssuranceType.JAUNE -> com.pb123.hub.ui.theme.WarnAmber
-    AssuranceType.ROUGE -> PBRed
+    AssuranceType.ROUGE -> DangerRed
 }
 
 private fun shareRecap(context: android.content.Context, recap: String) {

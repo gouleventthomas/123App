@@ -1,5 +1,6 @@
 package com.pb123.hub.hub
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -30,12 +31,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import com.pb123.hub.ui.theme.PBBlue
-import com.pb123.hub.ui.theme.PBBlueDark
-import com.pb123.hub.ui.theme.PBRed
+import com.pb123.hub.R
+import com.pb123.hub.ui.theme.BrandCyan
+import com.pb123.hub.ui.theme.BrandTealDeep
 
 @Composable
 fun HubScreen(onOpenRoute: (String) -> Unit) {
@@ -67,42 +70,30 @@ private fun HubHeader() {
         modifier = Modifier
             .fillMaxWidth()
             .background(
-                Brush.verticalGradient(listOf(PBBlue, PBBlueDark)),
+                Brush.verticalGradient(listOf(BrandCyan, BrandTealDeep)),
             )
-            .padding(start = 20.dp, end = 20.dp, top = 36.dp, bottom = 28.dp),
+            .padding(start = 20.dp, end = 20.dp, top = 32.dp, bottom = 26.dp),
     ) {
         Column {
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Surface(
-                    color = androidx.compose.ui.graphics.Color.White,
-                    shape = RoundedCornerShape(10.dp),
-                ) {
-                    Text(
-                        text = "123",
-                        style = MaterialTheme.typography.titleLarge,
-                        fontWeight = FontWeight.Black,
-                        color = PBRed,
-                        modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp),
-                    )
-                }
-                Spacer(Modifier.width(10.dp))
-                Text(
-                    text = "PARE-BRISE",
-                    style = MaterialTheme.typography.titleLarge,
-                    fontWeight = FontWeight.Bold,
-                    color = androidx.compose.ui.graphics.Color.White,
-                )
-            }
-            Spacer(Modifier.height(14.dp))
+            Image(
+                painter = painterResource(R.drawable.logo_brand),
+                contentDescription = "123 Pare-Brise",
+                contentScale = ContentScale.Fit,
+                alignment = Alignment.CenterStart,
+                modifier = Modifier
+                    .fillMaxWidth(0.62f)
+                    .height(96.dp),
+            )
+            Spacer(Modifier.height(12.dp))
             Text(
                 text = "Hub Guides",
                 style = MaterialTheme.typography.headlineSmall,
-                color = androidx.compose.ui.graphics.Color.White,
+                color = Color.White,
             )
             Text(
                 text = "Vos procédures terrain, toujours à portée de main.",
                 style = MaterialTheme.typography.bodyMedium,
-                color = androidx.compose.ui.graphics.Color.White.copy(alpha = 0.85f),
+                color = Color.White.copy(alpha = 0.92f),
             )
         }
     }
