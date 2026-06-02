@@ -11,6 +11,10 @@ captures/
 .externalNativeBuild/
 .cxx/
 
+# Build artifacts
+*.apk
+*.aab
+
 # OS
 .DS_Store
 
