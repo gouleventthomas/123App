@@ -12,6 +12,7 @@ récapitulatif partageable). De nouveaux guides peuvent être ajoutés facilemen
 | Guide | État | Description |
 |-------|------|-------------|
 | **Sécurisation client** | ✅ Disponible | Trame d'appel de sécurisation : contrôle dossier, assurance, RDV, immobilisation, véhicule de courtoisie. |
+| **Chrono séchage colle** | ✅ Disponible | Minuteur du temps de roulage sécurisé + notification quand le véhicule peut rouler. |
 | Pose pare-brise | 🔜 À venir | Étapes de dépose / repose et contrôle qualité. |
 | Calibrage ADAS | 🔜 À venir | Procédure de recalibrage caméras / capteurs. |
 | Procédure assurance | 🔜 À venir | Déclaration de sinistre, dossiers verte / jaune / rouge. |

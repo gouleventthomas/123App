@@ -5,6 +5,7 @@ import androidx.compose.material.icons.automirrored.filled.Assignment
 import androidx.compose.material.icons.filled.Build
 import androidx.compose.material.icons.filled.CenterFocusStrong
 import androidx.compose.material.icons.filled.Shield
+import androidx.compose.material.icons.filled.Timer
 import androidx.compose.material.icons.filled.VerifiedUser
 import androidx.compose.ui.graphics.vector.ImageVector
 import com.pb123.hub.navigation.Routes
@@ -31,6 +32,12 @@ val hubGuides: List<Guide> = listOf(
         description = "Trame d'appel : contrôle dossier, assurance, RDV, immobilisation, courtoisie.",
         icon = Icons.Filled.Shield,
         route = Routes.SECURISATION,
+    ),
+    Guide(
+        title = "Chrono séchage colle",
+        description = "Minuteur du temps de roulage sécurisé, avec notification quand le véhicule peut rouler.",
+        icon = Icons.Filled.Timer,
+        route = Routes.CHRONO,
     ),
     Guide(
         title = "Pose pare-brise",

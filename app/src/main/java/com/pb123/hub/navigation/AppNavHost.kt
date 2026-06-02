@@ -6,6 +6,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.pb123.hub.guides.chrono.ChronoScreen
 import com.pb123.hub.guides.securisation.SecurisationScreen
 import com.pb123.hub.hub.HubScreen
 
@@ -13,6 +14,7 @@ import com.pb123.hub.hub.HubScreen
 object Routes {
     const val HUB = "hub"
     const val SECURISATION = "securisation"
+    const val CHRONO = "chrono"
 }
 
 @Composable
@@ -40,6 +42,9 @@ fun AppNavHost() {
         }
         composable(Routes.SECURISATION) {
             SecurisationScreen(onBack = { navController.popBackStack() })
+        }
+        composable(Routes.CHRONO) {
+            ChronoScreen(onBack = { navController.popBackStack() })
         }
     }
 }
