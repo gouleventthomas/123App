@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Windshield outline -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M34,38 L74,38 C77,38 79,40 79,43 L77,66 C77,69 75,71 72,71 L36,71 C33,71 31,69 31,66 L29,43 C29,40 31,38 34,38 Z" />
+    <path
+        android:fillColor="#1E7E78"
+        android:pathData="M37,43 L71,43 C72.5,43 73.5,44 73.4,45.5 L72,63 C71.9,64.4 70.9,65.5 69.5,65.5 L38.5,65.5 C37.1,65.5 36.1,64.4 36,63 L34.6,45.5 C34.5,44 35.5,43 37,43 Z" />
+    <!-- Check mark -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M47,54 L52,59 L63,46 L67,50 L52,67 L43,58 Z" />
+</vector>
